@@ -20,6 +20,7 @@ class nginx::params {
   $nx_conf_dir                = '/etc/nginx'
   $nx_confd_purge             = false
   $nx_worker_processes        = 1
+  $nx_worker_priority         = 0
   $nx_worker_connections      = 1024
   $nx_types_hash_max_size     = 1024
   $nx_types_hash_bucket_size  = 512

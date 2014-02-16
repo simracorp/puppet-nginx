@@ -30,6 +30,7 @@
 # }
 class nginx (
   $worker_processes       = $nginx::params::nx_worker_processes,
+  $worker_priority        = $nginx::params::nx_worker_priority,
   $worker_connections     = $nginx::params::nx_worker_connections,
   $package_name           = $nginx::params::package_name,
   $package_ensure         = $nginx::params::package_ensure,
@@ -71,6 +72,7 @@ class nginx (
 
   class { 'nginx::config':
     worker_processes      => $worker_processes,
+    worker_priority       => $worker_priority,
     worker_connections    => $worker_connections,
     proxy_set_header      => $proxy_set_header,
     proxy_http_version    => $proxy_http_version,
